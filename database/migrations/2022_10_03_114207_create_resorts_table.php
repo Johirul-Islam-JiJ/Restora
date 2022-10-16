@@ -17,10 +17,10 @@ class CreateResortsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('location');
-            $table->string('Description');
+            $table->string('description');
             $table->string('image');
             $table->string('amount');
-            $table->date('help');
+            $table->string('help');
             $table->timestamps();
         });
     }
