@@ -15,6 +15,12 @@ class CreateResortsTable extends Migration
     {
         Schema::create('resorts', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('location');
+            $table->string('Description');
+            $table->string('image');
+            $table->string('amount');
+            $table->date('help');
             $table->timestamps();
         });
     }
