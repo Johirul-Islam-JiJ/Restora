@@ -38,6 +38,7 @@
 
             <div class="container">
                 <h1>Welcome To Restora</h1>
+                <a href="{{ route('login') }}">Click Here to Login</a>
             </div>
         </div>
     </body>

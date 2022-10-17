@@ -76,6 +76,7 @@
         </nav>
 
         <main class="py-4">
+            @include('partials.header')
             <div>
                  @yield('content')
             </div>
