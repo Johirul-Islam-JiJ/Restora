@@ -23,9 +23,9 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-danger" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -45,24 +45,49 @@
                     <ul class="navbar-nav ms-auto">
                         @if (Auth::user())
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('resorts.index') }}">Resort</a>
+                                <a class="nav-link text-danger" href="{{ route('resorts.index') }}">Resort</a>
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">Home</a>
+                                <a class="nav-link text-danger" href="{{ route('home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Package</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Swimming</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Divisions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Travel Advisory</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="form-inline">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </form>
                             </li>
                         @endif
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link text-danger" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link text-danger"
+                                        href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
