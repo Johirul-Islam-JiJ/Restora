@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Resort List</div>
+                <div class="card-header text-center bg-dark text-danger"><H2>Resort List</H2></div>
 
                 <div class="card-body">
 

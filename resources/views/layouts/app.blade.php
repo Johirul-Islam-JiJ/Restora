@@ -45,7 +45,34 @@
                     <ul class="navbar-nav ms-auto">
                         @if (Auth::user())
                             <li class="nav-item">
+                                <a class="nav-link text-danger" href="{{ route('home') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-danger" href="{{ route('resorts.index') }}">Resort</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Package</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Swimming</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Divisions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Travel Advisory</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-danger" href="#">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="form-inline">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                </form>
                             </li>
                         @else
                             <li class="nav-item">
@@ -104,7 +131,8 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        class="d-none">
                                         @csrf
                                     </form>
                                 </div>

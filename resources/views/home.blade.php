@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">All Resort</div>
+            <div class="col-md-12">
+                <div class="card bg-secondary">
+                    <div class="card-header text-danger text-center bg-dark"><h1>All Resort</h1></div>
 
                     <div class="row">
                         @foreach ($resorts as $resort)
