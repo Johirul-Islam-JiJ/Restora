@@ -3,6 +3,7 @@
 use App\Http\Controllers\ResortController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Auth::routes();
 
-Route::resource('resorts',ResortController::class)
+Route::resource('resorts',ResortController::class);
+
+Route::resource('bookings', BookingController::class)
     ->except('show');
+
