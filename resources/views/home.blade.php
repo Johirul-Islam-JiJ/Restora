@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card bg-secondary">
-                    <div class="card-header text-danger text-center bg-dark"><h1>All Resort</h1></div>
+                    <div class="card-header text-danger text-center bg-dark"><h2>All Resort</h2></div>
 
                     <div class="row">
                         @foreach ($resorts as $resort)
