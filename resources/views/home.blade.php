@@ -18,7 +18,7 @@
                                         <p class="card-text">Location <span
                                                 style="color: red">{{ $resort->location }}</span></p>
                                         <p class="card-tex">{{ $resort->amount }}</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
+                                        <a href="{{ route('bookings.create') }}" class="btn btn-primary">Learn More</a>
                                     </div>
                                 </div>
                             </div>

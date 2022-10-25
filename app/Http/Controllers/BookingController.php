@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use App\Models\Resort;
 
 class BookingController extends Controller
 {
@@ -15,9 +16,10 @@ class BookingController extends Controller
     }
 
 
-    public function create()
+    public function create(Resort $resort)
     {
-        //
+        return view('bookings.create', compact('resort'));
+
     }
 
 
