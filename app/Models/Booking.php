@@ -9,6 +9,7 @@ class Booking extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    protected $fillable=[];
 
     public function resort()
     {

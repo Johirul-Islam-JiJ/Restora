@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Resort extends Model
 {
     protected $guarded = [];
+    protected $fillable=[];
     public function getImageAttribute($value): ?string
     {
         if($value)
