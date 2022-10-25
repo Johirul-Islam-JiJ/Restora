@@ -51,20 +51,9 @@
                                 <a class="nav-link text-danger" href="{{ route('resorts.index') }}">Resort</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Package</a>
+                                <a class="nav-link text-danger" href="{{ route('bookings.index') }}">Booking</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Swimming</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Divisions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Travel Advisory</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Promotions</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="#">Contact Us</a>
                             </li>
@@ -87,12 +76,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="#">Divisions</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Travel Advisory</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-danger" href="#">Promotions</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="#">Contact Us</a>
                             </li>
