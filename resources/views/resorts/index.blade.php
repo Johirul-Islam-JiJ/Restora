@@ -15,7 +15,18 @@
                 <div class="card">
                     <div class="card-header text-center bg-dark text-danger">
                         <H2>Resort List</H2>
+
+                        <div class="col-md-12">
+                            <form action="" method="GET">
+                                <div class="form-group">
+                                    <input type="search" name="search" id="" class="form-control"
+                                        placeholder="Search By Name, email, price ">
+                                </div>
+                                <button class="btn-primary btn-sm">Search</button>
+                            </form>
+                        </div>
                     </div>
+
 
                     <div class="card-body">
 

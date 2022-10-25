@@ -60,12 +60,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="#">Contact Us</a>
                             </li>
-                            <li class="nav-item">
-                                <form class="form-inline">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                </form>
-                            </li>
+
                         @else
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="{{ route('homepage') }}">Home</a>
@@ -83,12 +78,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="#">Contact Us</a>
                             </li>
-                            <li class="nav-item">
-                                <form class="form-inline">
-                                    <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                </form>
-                            </li>
+
                         @endif
                         <!-- Authentication Links -->
                         @guest
