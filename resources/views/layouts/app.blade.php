@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +20,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    @yield('styles')
 </head>
 
 <body>
@@ -45,7 +48,7 @@
                     <ul class="navbar-nav ms-auto">
                         @if (Auth::user())
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="{{ route('home') }}">Home</a>
+                                <a class="nav-link text-danger" href="{{ route('homepage') }}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="{{ route('resorts.index') }}">Resort</a>
@@ -65,7 +68,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link text-danger" href="{{ route('home') }}">Home</a>
+                                <a class="nav-link text-danger" href="{{ route('homepage') }}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-danger" href="#">Package</a>

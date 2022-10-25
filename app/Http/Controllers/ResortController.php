@@ -10,7 +10,7 @@ class ResortController extends Controller
 
     public function index()
     {
-        $resorts = Resort::latest()->paginate();
+        $resorts = Resort::latest()->paginate(10);
         return view('resorts.index',compact('resorts'));
     }
 

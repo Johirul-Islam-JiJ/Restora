@@ -4,6 +4,8 @@ use App\Http\Controllers\ResortController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +19,17 @@ use App\Http\Controllers\BookingController;
 */
 
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
 
 Auth::routes();
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
 Route::resource('resorts',ResortController::class);
 
-Route::resource('bookings', BookingController::class)
-    ->except('show');
+Route::get('bookings', [BookingController::class,'index'])->name('bookings.index');
+Route::get('resorts/{resort}/bookings', [BookingController::class, 'create'])->name('bookings.create');
+Route::post('resorts/{resort}/bookings', [BookingController::class, 'store'])->name('bookings.store');
 
