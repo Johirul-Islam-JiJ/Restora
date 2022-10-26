@@ -34,7 +34,7 @@ class BookingController extends Controller
             })->first();
 
         if ($bookingExits) {
-            return view('datecheck.error');
+             return view('date.error');
         } else {
             $valid = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
