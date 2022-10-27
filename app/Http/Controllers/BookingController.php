@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Mail\BookingConfirm;
 use App\Models\Booking;
 use App\Models\Resort;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,7 +35,7 @@ class BookingController extends Controller
             })->first();
 
         if ($bookingExits) {
-             return view('date.error');
+            return view('date.error');
         } else {
             $valid = $request->validate([
                 'name' => ['required', 'string', 'max:255'],
@@ -81,6 +80,9 @@ class BookingController extends Controller
 
     public function destroy(Booking $booking)
     {
-        //
+        $booking = Booking::find($booking->id);
+        $booking->delete();
+        return back()->with('status', 'Deleted Successfully!!!');
+
     }
 }

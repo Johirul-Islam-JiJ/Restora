@@ -16,6 +16,18 @@
                         <form method="POST" action={{ route('bookings.store', $resort->id) }} enctype="multipart/form-data">
 
                             @csrf
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+
                             <div class="mb-3">
                                 <label for="name" class="form-label">User Name</label>
                                 <input type="text" value="{{ old('name') }}"
@@ -36,7 +48,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone No.</label>
-                                <input type="text" value="{{ old('phone') }}"
+                                <input type="number" value="{{ old('phone') }}"
                                     class="form-control @error('phone') is-invalid @enderror" name="phone" id="phone"
                                     placeholder="Enter Phone Number">
                                 @error('phone')
@@ -56,7 +68,7 @@
 
                             <div class="mb-3">
                                 <label for="nid" class="form-label">NID/Passport</label>
-                                <input type="text" value="{{ old('nid') }}"
+                                <input type="number" value="{{ old('nid') }}"
                                     class="form-control @error('nid') is-invalid @enderror" name="nid" id="nid"
                                     placeholder="Enter NID/Passport">
                                 @error('nid')
@@ -82,7 +94,7 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn btn-primary">Book Now</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>

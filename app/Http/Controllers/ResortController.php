@@ -78,6 +78,6 @@ class ResortController extends Controller
     {
          $resort = Resort::find($resort->id);
         $resort->delete();
-        return back()->with('status','Book Deleted Successfully!!!');
+        return back()->with('status','Resort Deleted Successfully!!!');
     }
 }

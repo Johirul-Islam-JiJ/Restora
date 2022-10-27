@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use App\Models\Booking;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -14,7 +13,7 @@ class BookingConfirm extends Mailable
 
   public $booking;
 
-    public function __construct(Booking $booking)
+    public function __construct($booking)
     {
         $this->booking = $booking;
     }
@@ -22,6 +21,6 @@ class BookingConfirm extends Mailable
 
     public function build()
     {
-        return $this->markdown('emails.booking-confirmation');
+        return $this->markdown('emails.DemoMail');
     }
 }

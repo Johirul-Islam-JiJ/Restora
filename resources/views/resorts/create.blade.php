@@ -44,8 +44,8 @@
 
                             <div class="form-group">
                                 <label for="description">Description</label>
-                                <input type="text" class="form-control mb-3" id="description" name="description"
-                                    value="{{ old('description') }}" placeholder="Enter Description">
+                                <textarea type="text" class="form-control mb-3" id="description" name="description"
+                                    value="{{ old('description') }}" placeholder="Enter Description"> </textarea>
                             </div>
 
                             <div class="form-group">
@@ -56,13 +56,13 @@
 
                             <div class="form-group">
                                 <label for="amount">Amount</label>
-                                <input type="text" class="form-control mb-3" id="amount" name="amount"
+                                <input type="number" class="form-control mb-3" id="amount" name="amount"
                                     value="{{ old('amount') }}" placeholder="Amount">
                             </div>
                             <div class="form-group">
-                                <label for="help">Help</label>
-                                <input type="text" class="form-control mb-3" id="help" name="help"
-                                    value="{{ old('help') }}" placeholder="Help">
+                                <label for="help">Contact Number</label>
+                                <input type="number" class="form-control mb-3" id="help" name="help"
+                                    value="{{ old('help') }}" placeholder="Contact Number">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Submit</button>
