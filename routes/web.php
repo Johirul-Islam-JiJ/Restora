@@ -30,11 +30,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::resource('resorts',ResortController::class);
-Route::get('/mail', function() {
-
-    Mail::to('admin@gmail.com')->send(new BookingMail());
-});
-
 Route::get('bookings', [BookingController::class,'index'])->name('bookings.index');
 Route::get('resorts/{resort}/bookings', [BookingController::class, 'create'])->name('bookings.create');
 Route::post('resorts/{resort}/bookings', [BookingController::class, 'store'])->name('bookings.store');
