@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BookingConfirm;
+use App\Mail\BookingConfirmation;
 use App\Models\Booking;
 use App\Models\Resort;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -49,16 +50,17 @@ class BookingController extends Controller
 
             $booking = $resort->bookings()->create($valid);
 
-            // $user = User::first();
+            $user = User::first();
             if ($booking) {
                 // send mail
                 try {
-                    Mail::to($booking->email)->send(new BookingConfirm($booking));
+                    Mail::to($booking->email)->send(new BookingConfirmation($booking));
                 } catch (\Exception$exception) {
                     echo $exception->getMessage();
                 }
                 return redirect('/')->with('message', ' Booking Complete Successfully');
             }
+
             return back()->with('error', 'Somethings Went Wrong');
         }
     }
