@@ -8,10 +8,18 @@ use Illuminate\Http\Request;
 class ResortController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request['search'] ?? "";
+        if ($search !=""){
+            $resorts= Resort::where('name','=',"$search")->get();
+        }
+        else{
+            $resorts=Resort::all();
+        }
+
         $resorts = Resort::latest()->paginate(10);
-        return view('resorts.index',compact('resorts'));
+        return view('resorts.index',compact('resorts','search'));
     }
 
 
