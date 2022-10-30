@@ -18,7 +18,7 @@ class ResortController extends Controller
             $resorts=Resort::all();
         }
 
-        $resorts = Resort::latest()->paginate(10);
+        $resorts = Resort::latest()->paginate(5);
         return view('resorts.index',compact('resorts','search'));
     }
 

@@ -6,8 +6,8 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">Resort List
-                        <a class="btn btn-success btn-sm " href="{{ route('resorts.index') }}">Back</a>
+                    <div class="card-header bg-dark text-danger">Resort List
+                        <a class="btn btn-success btn-sm float-end" href="{{ route('resorts.index') }}">Back</a>
                     </div>
 
 
