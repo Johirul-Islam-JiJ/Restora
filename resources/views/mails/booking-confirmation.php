@@ -1,5 +1,5 @@
 @component('mail::message')
-# Hello, {{ $booking->name }}!!
+Hello, {{ $booking->name }}!!
 
 Your resort Booking is success!! {{ $booking->resort->date }}, from{{ $booking->checkin }} to {{ $booking->checkout }}
 

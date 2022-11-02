@@ -28,6 +28,7 @@
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone</th>
                                 <th scope="col">NID</th>
+                                <th scope="col">Amount</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">CheckIn</th>
                                 <th scope="col">CheckOut</th>
@@ -43,6 +44,7 @@
                                     <td>{{ $booking->email }}</td>
                                     <td>{{ $booking->phone }}</td>
                                     <td>{{ $booking->nid }}</td>
+                                    <td>{{ $booking->resort->amount }}</td>
                                     <td>{{ $booking->address }}</td>
                                     <td>{{ $booking->checkin }}</td>
                                     <td>{{ $booking->checkout }}</td>
