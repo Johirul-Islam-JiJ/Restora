@@ -77,6 +77,16 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="nid" class="form-label">Amount</label>
+
+                                <input type="text" class="form-control mb-3" @error('amount') is-invalid @enderror id="amount" name="amount" value="{{ $resort->amount }}"
+                                placeholder="Amount">
+                                @error('amount')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="checkin" class="form-label">Check In</label>
                                 <input type="date" value="{{ old('checkin') }}"
                                     class="form-control @error('checkin') is-invalid @enderror" name="checkin"
