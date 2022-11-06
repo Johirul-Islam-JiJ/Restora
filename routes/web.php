@@ -31,7 +31,7 @@ Route::resource('resorts',ResortController::class);
 Route::get('bookings', [BookingController::class,'index'])->name('bookings.index');
 Route::get('resorts/{resort}/bookings', [BookingController::class, 'create'])->name('bookings.create');
 Route::post('resorts/{resort}/bookings', [BookingController::class, 'store'])->name('bookings.store');
-// Route::delete('/bookings/{booking}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::delete('/bookings/{booking}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 
 

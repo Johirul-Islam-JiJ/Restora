@@ -4,6 +4,10 @@
     <style>
         .w-5 {
             display: none;
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
         }
     </style>
 @endsection
@@ -32,7 +36,7 @@
                                 <th scope="col">Address</th>
                                 <th scope="col">CheckIn</th>
                                 <th scope="col">CheckOut</th>
-                                {{-- <th scope="col">Action</th> --}}
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,8 +52,7 @@
                                     <td>{{ $booking->address }}</td>
                                     <td>{{ $booking->checkin }}</td>
                                     <td>{{ $booking->checkout }}</td>
-                                    <td>{{ $booking->delete }}</td>
-                                    {{-- <td>
+                                    <td>
                                         <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -57,17 +60,19 @@
                                                 <i class="fa fa-trash">Delete</i>
                                             </button>
                                         </form>
-                                    </td> --}}
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    <span class="float-end">
+                        {{ $bookings->links() }}
+                    </span>
                 </div>
 
+
             </div>
-            <span>
-                {{ $bookings->links() }}
-            </span>
+
         </div>
     </div>
 @endsection

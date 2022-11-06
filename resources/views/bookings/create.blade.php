@@ -77,9 +77,9 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="nid" class="form-label">Amount</label>
+                                <label for="amount" class="form-label">Amount</label>
 
-                                <input type="text" class="form-control mb-3" @error('amount') is-invalid @enderror id="amount" name="amount" value="{{ $resort->amount }}"
+                                <input type="number" class="form-control mb-3" @error('amount') is-invalid @enderror id="amount" name="amount" value="{{ $resort->amount }}"
                                 placeholder="Amount">
                                 @error('amount')
                                     <div class="alert alert-danger">{{ $message }}</div>
