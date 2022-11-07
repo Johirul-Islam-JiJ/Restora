@@ -17,9 +17,9 @@
                         <H2>Resort List</H2>
 
                         <div class="col-md-12">
-                            <form action="">
+                            <form method="GET" action="">
                                 <div class="form-group">
-                                    <input type="search" name="search" id="" class="form-control" value="{{ $search }}"
+                                    <input type="search" name="search" id="" class="form-control" value='search'
                                         placeholder="Search By Name, email, price ">
                                 </div>
                                 <button class="btn-primary btn-sm">Search</button>

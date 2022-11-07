@@ -24,8 +24,17 @@ use App\Http\Controllers\HomepageController;
 Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
 
-Auth::routes();
+// Route::get('/', funhction()){
+//     $resorts = Post ::latest();
+//     if (request('search')){
+//         $resorts->where('name','like','%'.request('search').'%');
+//     }
+//     return view('resorts',[
+//         'resorts' =>$resorts->get()
+//     ])
+// }
 
+Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('resorts',ResortController::class);
 Route::get('bookings', [BookingController::class,'index'])->name('bookings.index');

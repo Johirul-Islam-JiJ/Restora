@@ -5,21 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Resort;
 use Illuminate\Http\Request;
 
+
 class ResortController extends Controller
 {
 
     public function index(Request $request)
     {
-        $search = $request['search'] ?? "";
-        if ($search !=""){
-            $resorts= Resort::where('name','=',"$search")->get();
-        }
-        else{
-            $resorts=Resort::all();
-        }
-
-        $resorts = Resort::latest()->paginate(5);
-        return view('resorts.index',compact('resorts','search'));
+        $resorts = Resort::latest()->filter(request(['search']))->paginate(5);
+        return view('resorts.index',compact('resorts'));
     }
 
 
